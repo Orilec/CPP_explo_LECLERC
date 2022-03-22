@@ -8,15 +8,15 @@ int main()
     string lieu1 = "forêt";
     string lieu2 = "village";
     string lieu_choisi = " ";
-    int choix = 0;
+    string choix = "";
 
-    while (choix != 1 && choix != 2)
+    while (choix != "FORET" && choix != "VILLAGE")
     {
-        cout << "Où désirez-vous vous rendre? 1 - Forêt  2 - Village " << endl;
+        cout << "Où désirez-vous vous rendre? -FORET  - VILLAGE " << endl;
         cin >> choix;
     }
 
-    if (choix == 1)
+    if (choix == "FORET")
     {
         lieu_choisi = lieu1;
     }

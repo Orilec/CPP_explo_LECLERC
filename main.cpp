@@ -31,8 +31,8 @@ int main()
             for (int j = 0; j < lieu_actuel->getListe().size(); j++)
             {
                 Lieu destination = listeLieux.at(lieu_actuel->getListe().at(j));
-                cout << lieu_actuel->getListe().at(j) << endl;
-                cout << destination.getName() << endl;
+                cout << lieu_actuel->getListe().at(j) << destination.getName() << endl;
+
             }
             cin >> choix;
             for (int j = 0; j < lieu_actuel->getListe().size(); j++)
@@ -46,7 +46,7 @@ int main()
             {
                 endurance = lieu_actuel->setEndurance(listeLieux.at(choix), endurance);
                 *lieu_actuel = lieu_actuel->deplacement(listeLieux.at(choix));
-                cout << endurance << endl;
+                cout << "Vous avez" << endurance << "endurance" << endl;
                 
             } 
             else

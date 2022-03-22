@@ -25,7 +25,15 @@ int main()
         {
             bool possible = false;
             cout << "Vous êtes actuellement ici: " + lieu_actuel->getName() << endl;
-            cout << "Où voulez vous vous rendre? " << endl;
+
+            cout << "Où voulez vous vous rendre? " << endl;            
+            
+            for (int j = 0; j < lieu_actuel->getListe().size(); j++)
+            {
+                Lieu destination = listeLieux.at(lieu_actuel->getListe().at(j));
+                cout << lieu_actuel->getListe().at(j) << endl;
+                cout << destination.getName() << endl;
+            }
             cin >> choix;
             for (int j = 0; j < lieu_actuel->getListe().size(); j++)
             {

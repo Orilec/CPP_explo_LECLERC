@@ -21,6 +21,7 @@ class Lieu {
         int getDifficulte();
         std::vector<int> getListe();
         Lieu deplacement(Lieu nouveauLieu);
+        int setEndurance(Lieu nouveauLieu, int endurance);
 
 };
 

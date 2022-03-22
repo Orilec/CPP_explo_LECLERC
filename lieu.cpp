@@ -43,6 +43,11 @@ std::vector<int> Lieu::getListe()
     return _liste;
 }
 
+int Lieu::setEndurance (Lieu nouveauLieu, int endurance){
+endurance = endurance - (_difficulte + nouveauLieu.getDifficulte());
+return endurance;
+
+}
 Lieu Lieu::deplacement( Lieu nouveauLieu)
 {
     std::cout << nouveauLieu.getDescription();

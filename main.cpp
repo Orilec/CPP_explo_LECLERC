@@ -17,7 +17,7 @@ int main()
 
     Lieu *lieu_actuel = lieu1;
 
-    
+    int endurance = 100;
 
     while (!gameOver)
     {
@@ -44,8 +44,11 @@ int main()
             }
             if (possible)
             {
+                endurance = lieu_actuel->setEndurance(listeLieux.at(choix), endurance);
                 *lieu_actuel = lieu_actuel->deplacement(listeLieux.at(choix));
-            }
+                cout << endurance << endl;
+                
+            } 
             else
             {
                 cout << "Ce lieu n'est pas accessible" << endl;
